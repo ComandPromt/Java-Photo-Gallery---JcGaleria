@@ -277,7 +277,13 @@ public class interfaz extends javax.swing.JFrame {
 	}
 
 	private void CMD_NEXTActionPerformed(java.awt.event.ActionEvent evt) {
-
+		
+		if (paso == 0 && posicionactual == 0 && size > 1) {
+			posicionactual += 1;
+			verImagen(posicionactual);
+			paso = posicionactual;
+		}
+		
 		if (paso == size || posicionactual == size) {
 			FOTO_A.setIcon(Mi_Galeria.getPreview(size - 3));
 			FOTO_B.setIcon(Mi_Galeria.getPreview(size - 2));
